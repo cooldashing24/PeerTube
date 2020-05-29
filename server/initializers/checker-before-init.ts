@@ -34,7 +34,9 @@ function checkMissedConfig () {
     'history.videos.max_age', 'views.videos.remote.max_age',
     'rates_limit.login.window', 'rates_limit.login.max', 'rates_limit.ask_send_email.window', 'rates_limit.ask_send_email.max',
     'theme.default',
-    'remote_redundancy.videos.accept_from'
+    'remote_redundancy.videos.accept_from',
+    'search.remote_uri.users', 'search.remote_uri.anonymous', 'search.search_index.enabled', 'search.search_index.url',
+    'search.search_index.disable_local_search', 'search.search_index.is_default_search'
   ]
   const requiredAlternatives = [
     [ // set

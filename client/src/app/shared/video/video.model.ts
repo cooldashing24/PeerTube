@@ -33,10 +33,13 @@ export class Video implements VideoServerModel {
   serverHost: string
   thumbnailPath: string
   thumbnailUrl: string
+
   previewPath: string
   previewUrl: string
+
   embedPath: string
   embedUrl: string
+
   views: number
   likes: number
   dislikes: number
@@ -100,13 +103,13 @@ export class Video implements VideoServerModel {
     this.name = hash.name
 
     this.thumbnailPath = hash.thumbnailPath
-    this.thumbnailUrl = absoluteAPIUrl + hash.thumbnailPath
+    this.thumbnailUrl = hash.thumbnailUrl || (absoluteAPIUrl + hash.thumbnailPath)
 
     this.previewPath = hash.previewPath
-    this.previewUrl = absoluteAPIUrl + hash.previewPath
+    this.previewUrl = hash.previewUrl || (absoluteAPIUrl + hash.previewPath)
 
     this.embedPath = hash.embedPath
-    this.embedUrl = absoluteAPIUrl + hash.embedPath
+    this.embedUrl = hash.embedUrl || (absoluteAPIUrl + hash.embedPath)
 
     this.views = hash.views
     this.likes = hash.likes
